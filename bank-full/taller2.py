@@ -51,3 +51,38 @@ print(f'accuracy de Entrenamiento de Entrenamiento: {logreg.score(x_train, y_tra
 print(f'accuracy de Test de Entrenamiento: {logreg.score(x_test, y_test)}')
 print(f'accuracy de Validación: {logreg.score(x_test_out, y_test_out)}')
 
+# MAQUINA DE SOPORTE VECTORIA
+svc = SVC(gamma='auto')
+svc.fit(x_train, y_train)
+print('*'*50)
+print('Maquina de soporte vectorial')
+print(f'accuracy de Entrenamiento de Entrenamiento: {svc.score(x_train, y_train)}')
+print(f'accuracy de Test de Entrenamiento: {svc.score(x_test, y_test)}')
+print(f'accuracy de Validación: {svc.score(x_test_out, y_test_out)}')
+
+# ARBOL DE DECISIÓN
+arbol = DecisionTreeClassifier()
+arbol.fit(x_train, y_train)
+print('*'*50)
+print('Decisión Tree')
+print(f'accuracy de Entrenamiento de Entrenamiento: {arbol.score(x_train, y_train)}')
+print(f'accuracy de Test de Entrenamiento: {arbol.score(x_test, y_test)}')
+print(f'accuracy de Validación: {arbol.score(x_test_out, y_test_out)}')
+
+# RANDOM FOREST
+forest = RandomForestClassifier()
+forest.fit(x_train, y_train)
+print('*'*50)
+print('RANDOM FOREST')
+print(f'accuracy de Entrenamiento de Entrenamiento: {forest.score(x_train, y_train)}')
+print(f'accuracy de Test de Entrenamiento: {forest.score(x_test, y_test)}')
+print(f'accuracy de Validación: {forest.score(x_test_out, y_test_out)}')
+
+# NAIVE BAYES
+nayve = GaussianNB()
+nayve.fit(x_train, y_train)
+print('*'*50)
+print('NAYVE BAYES')
+print(f'accuracy de Entrenamiento de Entrenamiento: {nayve.score(x_train, y_train)}')
+print(f'accuracy de Test de Entrenamiento: {nayve.score(x_test, y_test)}')
+print(f'accuracy de Validación: {nayve.score(x_test_out, y_test_out)}')
